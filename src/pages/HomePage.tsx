@@ -163,10 +163,7 @@ export default function HomePage() {
         <FaqSection />
       </Reveal>
 
-      {/* Aakhri form: halka blur, taake page dheere se band ho */}
-      <Reveal from="blur">
-        {/* <NewsletterSection /> */}
-      </Reveal>
+   
 
       <Reveal from="scale">
         <CtaSection />
