@@ -22,7 +22,7 @@ import { VideosSection } from "@/components/home/VideosSection";
 import { LatestProfilesSection } from "@/components/home/LatestProfilesSection";
 import { MobileAppSection } from "@/components/home/MobileAppSection";
 import { FaqSection } from "@/components/home/FaqSection";
-import { NewsletterSection } from "@/components/home/NewsletterSection";
+
 import { CtaSection } from "@/components/home/CtaSection";
 
 export default function HomePage() {
