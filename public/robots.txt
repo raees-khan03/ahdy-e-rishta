@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /profiles/*?*
+Disallow: /shortlist
+Disallow: /login
+
+Sitemap: https://ahde-rishta.example.com/sitemap.xml

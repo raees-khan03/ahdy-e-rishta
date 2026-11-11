@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Placeholder sitemap. Regenerate from the real domain before launch. -->
+<urlset xmlns="http://www.sitemap.org/schemas/sitemap/0.9">
+  <url><loc>https://ahde-rishta.example.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://ahde-rishta.example.com/profiles</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://ahde-rishta.example.com/register</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ahde-rishta.example.com/services</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ahde-rishta.example.com/services/rishta-matching</loc><priority>0.7</priority></url>
+  <url><loc>https://ahde-rishta.example.com/services/personal-matchmaking</loc><priority>0.7</priority></url>
+  <url><loc>https://ahde-rishta.example.com/services/second-marriage</loc><priority>0.7</priority></url>
+  <url><loc>https://ahde-rishta.example.com/services/overseas-proposals</loc><priority>0.7</priority></url>
+  <url><loc>https://ahde-rishta.example.com/services/marriage-counselling</loc><priority>0.7</priority></url>
+  <url><loc>https://ahde-rishta.example.com/services/face-to-face-meetings</loc><priority>0.7</priority></url>
+  <url><loc>https://ahde-rishta.example.com/packages</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ahde-rishta.example.com/how-it-works</loc><priority>0.7</priority></url>
+  <url><loc>https://ahde-rishta.example.com/about</loc><priority>0.6</priority></url>
+  <url><loc>https://ahde-rishta.example.com/team</loc><priority>0.5</priority></url>
+  <url><loc>https://ahde-rishta.example.com/branches</loc><priority>0.6</priority></url>
+  <url><loc>https://ahde-rishta.example.com/contact</loc><priority>0.7</priority></url>
+  <url><loc>https://ahde-rishta.example.com/faq</loc><priority>0.6</priority></url>
+  <url><loc>https://ahde-rishta.example.com/safety-tips</loc><priority>0.6</priority></url>
+  <url><loc>https://ahde-rishta.example.com/success-stories</loc><priority>0.6</priority></url>
+  <url><loc>https://ahde-rishta.example.com/videos</loc><priority>0.5</priority></url>
+  <url><loc>https://ahde-rishta.example.com/blog</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahde-rishta.example.com/terms</loc><priority>0.3</priority></url>
+  <url><loc>https://ahde-rishta.example.com/privacy</loc><priority>0.3</priority></url>
+  <url><loc>https://ahde-rishta.example.com/refund-policy</loc><priority>0.3</priority></url>
+</urlset>

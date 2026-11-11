@@ -1,0 +1,282 @@
+@import "tailwindcss" source(none);
+
+@source "../index.html";
+@source "./**/*.{ts,tsx}";
+
+@theme {
+  /* ---------------- Fonts ---------------- */
+  --font-heading: "Fraunces Variable", Georgia, "Times New Roman", serif;
+  --font-sans: "Plus Jakarta Sans Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-script: "Great Vibes", cursive;
+  --font-urdu: "Noto Nastaliq Urdu Variable", "Noto Nastaliq Urdu", serif;
+
+  /* ---------------- Maroon ---------------- */
+  --color-maroon-50: #fdf3f3;
+  --color-maroon-100: #fbe6e7;
+  --color-maroon-200: #f6cdd0;
+  --color-maroon-300: #efa9ae;
+  --color-maroon-400: #e47b84;
+  --color-maroon-500: #d34e5c;
+  --color-maroon-600: #b93245;
+  --color-maroon-700: #9b2438;
+  --color-maroon-800: #7c1b2c;
+  --color-maroon-900: #5e1322;
+  --color-maroon-950: #3a0a15;
+
+  /* ---------------- Peach ---------------- */
+  --color-peach-50: #fdf5f0;
+  --color-peach-100: #fbe9dd;
+  --color-peach-200: #f7d2ba;
+  --color-peach-300: #f3b894;
+  --color-peach-400: #efa57e;
+  --color-peach-500: #e58a5e;
+  --color-peach-600: #d26f43;
+  --color-peach-700: #ad5634;
+
+  /* ---------------- Cream ---------------- */
+  --color-cream-50: #fdfbf7;
+  --color-cream-100: #f8f3ea;
+  --color-cream-200: #f0e8da;
+  --color-cream-300: #e6d9c4;
+
+  /* ---------------- Khaki / gold-beige ornament ---------------- */
+  --color-khaki-200: #e3dac7;
+  --color-khaki-300: #d8cbae;
+  --color-khaki-400: #c3b091;
+  --color-khaki-500: #a99b7e;
+
+  /* ---------------- Semantic tokens ---------------- */
+  --color-background: #fdfbf7;
+  --color-foreground: #3a1b1f;
+  --color-border: #ece2d6;
+  --color-input: #e6d9c4;
+  --color-ring: #9b2438;
+  --color-muted: #f8f3ea;
+  --color-muted-foreground: #7a6260;
+  --color-card: #ffffff;
+  --color-card-foreground: #3a1b1f;
+
+  /* ---------------- Motion ---------------- */
+  --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --animate-fade-in: fade-in 0.2s ease-out;
+  --animate-fade-out: fade-out 0.15s ease-in;
+  --animate-accordion-down: accordion-down 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+  --animate-accordion-up: accordion-up 0.22s ease-in;
+  --animate-slide-up: slide-up 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-out {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+
+  /* ---------------- Radius ---------------- */
+  --radius-4xl: 2rem;
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before {
+    border-color: var(--color-border);
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    /* clip (not hidden) keeps position: sticky working while preventing sideways scroll */
+    overflow-x: clip;
+  }
+
+  body {
+    background-color: var(--color-cream-50);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: clip;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    line-height: 1.12;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  :lang(ur) {
+    font-family: var(--font-urdu);
+    line-height: 2.1;
+  }
+
+  :lang(ur) h1,
+  :lang(ur) h2,
+  :lang(ur) h3,
+  :lang(ur) h4 {
+    font-family: var(--font-urdu);
+    letter-spacing: 0;
+    line-height: 1.9;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-maroon-700);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background-color: var(--color-maroon-200);
+    color: var(--color-maroon-950);
+  }
+
+  /* Slimmer scrollbars inside scroll regions */
+  .scroll-area {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-khaki-400) transparent;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+  /* horizontally scrollable rail without page overflow */
+  .no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .ornament-rose {
+    background-image: radial-gradient(
+      circle at 50% 50%,
+      color-mix(in oklab, var(--color-peach-300) 55%, transparent) 0%,
+      transparent 70%
+    );
+  }
+  .pattern-khaki {
+    background-image: radial-gradient(
+      color-mix(in oklab, var(--color-khaki-400) 45%, transparent) 1px,
+      transparent 1px
+    );
+    background-size: 18px 18px;
+  }
+  .animate-marquee {
+    animation: marquee 34s linear infinite;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes soft-pulse {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.06);
+  }
+}
+
+@keyframes footer-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(22px, -12px, 0) scale(1.05);
+  }
+}
+
+@keyframes footer-wave-shift {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-120px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  header,
+  footer,
+  [data-print-hide] {
+    display: none !important;
+  }
+  body {
+    background: #fff;
+  }
+}
